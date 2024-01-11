@@ -15,7 +15,7 @@
     rpcAvailable: true,
   }
   const testnetConfig = {
-    chainId: '0x395',
+    chainId: '0xb1ce2',
     chainName: 'OnlyLayer',
     nativeCurrency: {
       name: 'OnlyLayer',
