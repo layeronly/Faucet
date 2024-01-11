@@ -11,8 +11,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"gitlab.com/layeronly/faucet/internal/chain"
-	"gitlab.com/layeronly/faucet/internal/server"
+	"github.com/layeronly/faucet/internal/chain"
+	"github.com/layeronly/faucet/internal/server"
 )
 
 const (

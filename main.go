@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gitlab.com/layeronly/faucet/cmd"
+	"github.com/layeronly/faucet/cmd"
 )
 
 func main() {

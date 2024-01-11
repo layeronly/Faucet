@@ -12,7 +12,7 @@ import (
 	log "github.com/sirupsen/logrus"
 	"github.com/urfave/negroni"
 
-	"gitlab.com/layeronly/faucet/internal/chain"
+	"github.com/layeronly/faucet/internal/chain"
 )
 
 type Limiter struct {

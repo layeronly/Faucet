@@ -12,8 +12,8 @@ import (
 	"github.com/urfave/negroni"
 	"golang.org/x/sync/semaphore"
 
-	"gitlab.com/layeronly/faucet/internal/chain"
-	"gitlab.com/layeronly/faucet/web"
+	"github.com/layeronly/faucet/internal/chain"
+	"github.com/layeronly/faucet/web"
 )
 
 const AddressKey string = "address"
