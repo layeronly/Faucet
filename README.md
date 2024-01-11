@@ -61,7 +61,7 @@ _For more details, please refer to the [web readme](https://github.com/layeronly
 go build
 export WEB3_PROVIDER=https://onlylayer.org
 export PRIVATE_KEY=secret
-./onlyfaucet
+./faucet
 ```
 
 ## License
