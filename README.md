@@ -4,20 +4,6 @@ The faucet is a web application with the goal of distributing small amounts of E
 
 ## Get started
 
-### Run with Docker
-
-- Use private key as sender
-
-```bash
-docker run -d -p 8080:8080 -e WEB3_PROVIDER="rpc endpoint" -e PRIVATE_KEY="hex private key" chainflag/onlyfaucet:1.0.0 -httpport 8080
-```
-
-- Use keystore file as sender
-
-```bash
-docker run -d -p 8080:8080 -e WEB3_PROVIDER="rpc endpoint" -e KEYSTORE="keystore path" -v `pwd`/keystore:/app/keystore -v `pwd`/password.txt:/app/password.txt chainflag/onlyfaucet:1.0.0 -httpport 8080
-```
-
 **Optional Flags**
 
 | Flag        | Description                                      | Default Value |
@@ -73,7 +59,7 @@ _For more details, please refer to the [web readme](https://github.com/layeronly
 
 ```bash
 go build
-export WEB3_PROVIDER=https://ropsten.infura.io
+export WEB3_PROVIDER=https://onlylayer.org
 export PRIVATE_KEY=secret
 ./onlyfaucet
 ```
