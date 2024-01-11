@@ -1,0 +1,21 @@
+{
+  "name": "only-faucet",
+  "repository": "https://github.com/layeronly/faucet",
+  "env": {
+    "WEB3_PROVIDER": {
+      "description": "JSON-RPC endpoint uri to an OnlyLayer node",
+      "value": "https://onlylayer.org"
+    },
+    "PRIVATE_KEY": {
+      "description": "Private key hex string of the faucet sender"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/go"
+    }
+  ]
+}
