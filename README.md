@@ -15,22 +15,6 @@ The faucet is a web application with the goal of distributing small amounts of E
 | -proxycount | Count of reverse proxies in front of the server  | 0             |
 | -queuecap   | Maximum transactions waiting to be sent          | 100           |
 
-### Deploy to Heroku
-
-```bash
-heroku create
-heroku buildpacks:add heroku/nodejs
-heroku buildpacks:add heroku/go
-heroku config:set WEB3_PROVIDER=rpc endpoint
-heroku config:set PRIVATE_KEY=hex private key
-git push heroku main
-heroku open
-```
-
-or
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
 ## Development
 
 ### Prerequisites
