@@ -1,4 +1,4 @@
-module gitlab.com/Donaswap/aucet
+module gitlab.com/layeronly/faucet
 
 // +heroku goVersion go1.16
 go 1.16
