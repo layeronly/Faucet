@@ -169,14 +169,14 @@
           </div>
           <div id="navbarMenu" class="navbar-menu">
             <div class="navbar-end">
-              <a class="navbar-item" href="https://discord.com/" target="_blank">
-                <i class="fab fa-discord"></i> Discord
+              <a class="navbar-item" href="https://discord.com/invite/WDQ5Sys2" target="_blank">
+                <i class="fab"></i> Discord
               </a>
-              <a class="navbar-item" href="https://t.me/" target="_blank">
-                <i class="fab fa-telegram"></i> Telegram
+              <a class="navbar-item" href="https://t.me/onlylayer" target="_blank">
+                <i class="fab"></i> Telegram
               </a>
-              <a class="navbar-item" href="https://twitter.com/" target="_blank">
-                <i class="fab fa-twitter"></i> Twitter
+              <a class="navbar-item" href="https://twitter.com/onlylayer" target="_blank">
+                <i class="fab"></i> Twitter
               </a>
               <span class="navbar-item">
                 <button on:click={requestAccounts} class="button is-primary is-rounded short-text">{address ? 'Wallet Connected' : 'Connect Wallet'}</button>
@@ -202,7 +202,7 @@
       <div class="container has-text-centered">
         <div class="column is-8 is-offset-2"> 
           <h1 class="title">
-            Receive {faucetInfo.payout} coins per request
+            Receive {faucetInfo.payout} coin per request
           </h1>
           <h2 class="subtitle">
             Serving from {faucetInfo.account}
