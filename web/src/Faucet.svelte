@@ -169,27 +169,47 @@
           </div>
           <div id="navbarMenu" class="navbar-menu">
             <div class="navbar-end">
+              <a class="navbar-item" href="https://discord.com/" target="_blank">
+                <i class="fab fa-discord"></i> Discord
+              </a>
+              <a class="navbar-item" href="https://t.me/" target="_blank">
+                <i class="fab fa-telegram"></i> Telegram
+              </a>
+              <a class="navbar-item" href="https://twitter.com/" target="_blank">
+                <i class="fab fa-twitter"></i> Twitter
+              </a>
               <span class="navbar-item">
-              <button on:click={requestAccounts} class="button is-primary is-rounded short-text">{address ? 'Wallet Connected' : 'Connect Wallet'}</button>
+                <button on:click={requestAccounts} class="button is-primary is-rounded short-text">{address ? 'Wallet Connected' : 'Connect Wallet'}</button>
+              </span>
             </div>
           </div>
         </div>
       </nav>
     </div>
-
+    <section class="description">
+      <div class="container has-text-centered">
+        <div class="column is-8 is-offset-2">
+          <h1 class="title is-size-2">
+            Faucet Description
+          </h1>
+          <p class="subtitle">
+            Get free $ONLY for Only Layer! The amount sent is perfect for testing out OnlyLayer. Try our free faucet today and start exploring the possibilities of Only Layer!
+          </p>
+        </div>
+      </div>
+    </section>
     <div class="hero-body">
       <div class="container has-text-centered">
-        <div class="column is-6 is-offset-3">
+        <div class="column is-8 is-offset-2"> 
           <h1 class="title">
             Receive {faucetInfo.payout} coins per request
           </h1>
           <h2 class="subtitle">
-            Serving from
-            {faucetInfo.account}
+            Serving from {faucetInfo.account}
           </h2>
           {#if disabled}
             <div class="box">
-              <p>unable to contact network. please try again later</p>
+              <p>Unable to contact network. Please try again later.</p>
             </div>
           {:else if network === testnetConfig.chainId}
           <div class="box">
@@ -205,9 +225,7 @@
               <p class="control">
                 <button
                   on:click={handleRequest}
-                  class="button is-primary is-rounded"
-                >
-                  Request
+                  class="button is-primary is-rounded">Request
                 </button>
               </p>
             </div>
@@ -250,5 +268,35 @@
     margin-right: 10px;
     height: 32px; 
     width: 32px; 
+  }
+
+  .description .title {
+    color: #69A3FF;
+  }
+
+  .description .subtitle {
+    margin-top: -3rem;
+    line-height: 1.6;
+  }
+  .navbar-item {
+    color: #fff;
+    margin-right: 15px;
+    margin-top: 15px;
+  }
+
+  .navbar-item:hover {
+    color: #69A3FF;
+  }
+
+  .navbar-item i {
+    margin-right: 5px;
+  }
+
+  .hero-body {
+    margin-top: -16rem; 
+  }
+
+  .box {
+    margin-top: 1rem;
   }
 </style>
