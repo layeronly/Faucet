@@ -35,8 +35,6 @@ cd onlyfaucet
 npm run build
 ```
 
-_For more details, please refer to the [web readme](https://github.com/layeronly/faucet/blob/main/web/README.md)_
-
 3. Build binary application to run faucet
 
 ```bash
