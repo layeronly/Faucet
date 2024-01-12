@@ -179,7 +179,7 @@
                 <i class="fab"></i> Twitter
               </a>
               <span class="navbar-item">
-                <button on:click={requestAccounts} class="button is-primary is-rounded short-text">{address ? 'Wallet Connected' : 'Connect Wallet'}</button>
+                <button on:click={addTestnetToMetamask} class="button is-primary is-rounded short-text">Add OnlyLayer Testnet to Metamask</button>
               </span>
             </div>
           </div>
@@ -200,41 +200,31 @@
     </section>
     <div class="hero-body">
       <div class="container has-text-centered">
-        <div class="column is-8 is-offset-2"> 
-          <h1 class="title">
-            Receive {faucetInfo.payout} coin per request
-          </h1>
+        <div class="column is-8 is-offset-2">
+            <h1 class="title">
+              Receive {faucetInfo.payout} coin per request
+            </h1>
           <h2 class="subtitle">
             Serving from {faucetInfo.account}
           </h2>
-          {#if disabled}
             <div class="box">
-              <p>Unable to contact network. Please try again later.</p>
+              <div class="field is-grouped">
+                <p class="control is-expanded">
+                  <input
+                    bind:value={address}
+                    class="input is-rounded"
+                    type="text"
+                    placeholder="Enter your address"
+                  />
+                </p>
+                <p class="control">
+                  <button
+                    on:click={handleRequest}
+                    class="button is-primary is-rounded is-fullwidth-mobile">Request
+                  </button>
+                </p>
+              </div>
             </div>
-          {:else if network === testnetConfig.chainId}
-          <div class="box">
-            <div class="field is-grouped">
-              <p class="control is-expanded">
-                <input
-                  bind:value={address}
-                  class="input is-rounded"
-                  type="text"
-                  placeholder="Enter your address"
-                />
-              </p>
-              <p class="control">
-                <button
-                  on:click={handleRequest}
-                  class="button is-primary is-rounded">Request
-                </button>
-              </p>
-            </div>
-          </div>
-          {:else}
-          <button
-            on:click={addTestnetToMetamask}
-            class="button is-primary is-rounded">Switch to / Add OnlyLayer Testnet.</button>
-          {/if}
         </div>
       </div>
     </div>
@@ -250,24 +240,35 @@
     -o-background-size: cover;
     background-size: cover;
   }
+
   @media only screen and (max-width: 767px) {
     .short-text {
       font-size: 14px;
       line-height: 1.2;
     }
-  }  
+
+    .button.is-fullwidth-mobile {
+      width: 100%;
+    }
+
+    .hero .title {
+      display: none; /* Hide the title on small screens */
+    }
+  }
+
   .hero .subtitle {
     padding: 3rem 0;
     line-height: 1.5;
   }
+
   .box {
     border-radius: 19px;
   }
 
   .navbar-logo {
     margin-right: 10px;
-    height: 32px; 
-    width: 32px; 
+    height: 32px;
+    width: 32px;
   }
 
   .description .title {
@@ -278,6 +279,7 @@
     margin-top: -3rem;
     line-height: 1.6;
   }
+
   .navbar-item {
     color: #fff;
     margin-right: 15px;
@@ -293,7 +295,7 @@
   }
 
   .hero-body {
-    margin-top: -16rem; 
+    margin-top: -16rem;
   }
 
   .box {
